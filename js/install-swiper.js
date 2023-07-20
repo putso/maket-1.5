@@ -1,23 +1,19 @@
-let swiper = false; 
+let swiper = false;
+let classArr = {
+  swiperClass: "brands__cards",
+  pogination: "brands-pagination",
+  swiper: null,
+};
 
-function installSwiper() {
-	if (window.innerWidth <= 768) {
-			if (!swiper) {
-				swiper = true;
-					installSwiper = new Swiper(".brands__cards", {
-							spaceBetween: 16,
-							slidesPerView: "auto",
-							pagination: {
-									el: ".brands-pagination",
-									clickable: true,
-							},
-					});
-			}
-	} else if (swiper) {
-			installSwiper.destroy();
-			swiper = false;
-	}
+setSwiper(classArr);
+function setSwiper(object) {
+  let { swiperClass, pogination, swiper } = object;
+  object.swiper = new Swiper("." + swiperClass, {
+    spaceBetween: 16,
+    slidesPerView: "auto",
+    pagination: {
+      el: "." + pogination,
+      clickable: true,
+    },
+  });
 }
-
-installSwiper();
-window.addEventListener("resize", installSwiper);
