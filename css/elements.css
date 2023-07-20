@@ -1,0 +1,65 @@
+.button {
+    border: none;
+    display: block;
+    background: none;
+    cursor: pointer;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.icon-check-status{
+  background-image: url(../icons/checkstatus.svg);
+  width: 40px;
+  height: 40px;
+}
+.icon-setting {
+  background-image: url(../icons/repair.svg);
+}
+.icon-burger {
+  background-image: url(../icons/burger.svg);
+}
+.icon-phone {
+  background-image: url(../icons/call.svg);
+}
+.icon-message {
+  background-image: url(../icons/chat.svg);
+}
+.icon-profile {
+  background-image: url(../icons/profile.svg);
+}
+.icon-burger-close {
+  background-image: url('../icons/burger-close.svg');
+}
+.icon-search {
+  background-image: url('../icons/search.svg');
+}
+.icon-go {
+  background-image: url('../icons/go.svg');
+}
+.more-button {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "TT Lakes",sans-serif;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  padding: 0;
+  font-weight: 500;
+
+}
+.more-button::before {
+  content: '';
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+  background-image: url('../icons/expand.svg');
+}
+.more-button--active::before {
+  content: '';
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+  background-image: url('../icons/expand.svg');
+  transform: rotate(0.5turn);
+}
